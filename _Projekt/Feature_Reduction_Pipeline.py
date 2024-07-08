@@ -13,6 +13,6 @@ def select_features(dataframe, num_samples):
         p_values.append(p_value)
 
     # Select features with p-value greater than 0.05
-    selected_features = [column for column, p_value in zip(dataframe.columns, p_values) if p_value > 0.05]
+    selected_features = [column for column, p_value in zip(dataframe.columns, p_values) if p_value < 0.05]
 
     return selected_features
